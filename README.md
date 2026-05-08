@@ -478,7 +478,7 @@ Documentação completa com respostas detalhadas para perguntas de entrevista so
 - ✅ Interface GitHub e Pull Requests
 
 **🔗 Acesso Direto:**
-➡️ **[Ver Guia Completo](docs/git-github-interview-guide.md)**
+➡️ **[Ver Guia Completo](github-tests/docs/git-github-interview-guide.md)**
 
 **⭐ Destaques:**
 - Comandos seguros e melhores práticas
