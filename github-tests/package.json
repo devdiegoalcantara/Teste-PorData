@@ -1,0 +1,38 @@
+{
+  "name": "github-automation-tests",
+  "version": "1.0.0",
+  "description": "Testes automatizados E2E e de performance para GitHub usando Cypress e K6",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:report": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=false,html=true,json=true",
+    "cypress:merge:reports": "mochawesome-merge cypress/results/*.json -o cypress/results/merged-report.json && marge cypress/results/merged-report.json -f test-report -o cypress/results",
+    "k6:login": "k6 run k6-tests/login-performance.test.js",
+    "k6:repos": "k6 run k6-tests/repositories-performance.test.js",
+    "k6:logout": "k6 run k6-tests/logout-performance.test.js",
+    "k6:all": "k6 run k6-tests/login-performance.test.js && k6 run k6-tests/repositories-performance.test.js && k6 run k6-tests/logout-performance.test.js"
+  },
+  "keywords": [
+    "cypress",
+    "k6",
+    "testing",
+    "automation",
+    "github",
+    "e2e",
+    "performance"
+  ],
+  "author": "QA Analyst",
+  "license": "MIT",
+  "devDependencies": {
+    "axe-core": "^4.8.0",
+    "cypress": "^13.6.0",
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
